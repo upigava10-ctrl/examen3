@@ -52,9 +52,9 @@
         echo "<br>";            
         echo "</div>";
         echo "
-        <form action='' method='POST'>
+        <form action='' method='GET'>
         <input type='number' name='numero'>
-            <button type='submit' id='btn-ref'><a href='./comprar.php?cantidad=&sesion=$sesion&id={$pelicula['id']}&peli={$pelicula['titulo']}&precio={$pelicula['precio']}' >Comprar</a></button>
+            <button type='submit' id='btn-ref'><a href='./comprar.php?&sesion=$sesion&id={$pelicula['id']}&peli={$pelicula['titulo']}&precio={$pelicula['precio']}' >Comprar</a></button>
         </form>";
         }
         

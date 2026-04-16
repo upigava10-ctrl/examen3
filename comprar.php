@@ -18,7 +18,7 @@
         if ($_SERVER['REQUEST_METHOD']==='GET') {
             $sesion = $_GET["sesion"];
             $id = $_GET["id"];
-            $cantidad=$_POST['numero'];
+            $cantidad=$_GET['numero'];
             var_dump($cantidad);
             echo $cantidad;
             $precio=$_GET['precio'];
