@@ -1,8 +1,8 @@
 <?php
-   function ingresar() {
+   function ingresar($action) {
         
         echo "
-        <form action='' method='POST'>
+        <form action='$action' method='POST'>
         <label for='user'>
             <span>Usuario</span>
             <input type='text' name='user'>
@@ -31,9 +31,32 @@
 </head>
 <body>
 
+    <header>
+        <?php require "./components/header.php"; ?>
+
+    </header>
 
     <div>
-        <?php ingresar() ?>
+        <?php ingresar("./home/sesion.php") ?>
+    </div>
+
+    <div>
+        <?php // IMPRIMIR MENSAJES GET
+        if (!empty($_GET)) {
+        if ($_SERVER['REQUEST_METHOD']==='GET') {
+            if (isset($_GET["empty"])) {
+                $empty= $_GET["empty"];
+                echo "<div>$empty</div>";
+                    }
+                        
+            if (isset($_GET["error"])) {
+                $error = $_GET["error"];
+                echo " <div>$error</div>";
+                }            
+        }
+        
+        }
+        ?>
     </div>
 
 </body>
